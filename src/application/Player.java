@@ -20,6 +20,9 @@ public class Player extends BorderPane {
         view = new MediaView(player);
         mpane = new Pane();
 
+        view.setPreserveRatio(true);
+        view.setFitWidth(710);
+
         mpane.getChildren().add(view);
 
         setCenter(mpane);
@@ -28,6 +31,6 @@ public class Player extends BorderPane {
         setBottom(bar);
         setStyle("-fx-background-color: #bfc2c7");
 
-        player.play();
+        player.setAutoPlay(true);
     }
 }
